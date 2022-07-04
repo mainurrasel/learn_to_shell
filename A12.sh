@@ -1,13 +1,12 @@
 #! /usr/bin/bash
 #Write a script to print the length of each and every string using arrays
-echo  “Enter a sentence:”
+echo  "Write a sentence:"
 read sentence
 echo ""
 for word in $sentence
 do
-    echo $word
 	len=`expr "$word" : '.*'`
-	echo "Length is $len"
+	printf "%-30s%-10s- $len\n"  "Length of string (${word})";
 done
 
 
